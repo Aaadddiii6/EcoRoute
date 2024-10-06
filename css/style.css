@@ -1,0 +1,117 @@
+/**
+ * Theme Name: apl Logistics
+ * Author: Vuria
+ * Version: 1.0
+**/
+
+.sub-buttons__wrapper {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+}
+
+.sub-buttons {
+    width: calc(100% + 20px);
+    min-width: 195px;
+    display: none;
+    position: absolute;
+    padding: 5px 20px;
+}
+
+.header.sticky .sub-buttons {
+    background-color: #6e7591;
+}
+
+.sub-buttons__wrapper:hover > .sub-buttons {
+    display: block;
+}
+
+.button--sub {
+    text-align: left;
+    padding: 15px 10px;
+    min-width: 130px!important;
+    margin: 4px 0!important;
+    position: relative;
+}
+
+.button--sub::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    -webkit-transition: left .2s ease-in-out, right .2s ease-in-out, top .2s ease-in-out, bottom .2s ease-in-out;
+    -o-transition: left .2s ease-in-out, right .2s ease-in-out, top .2s ease-in-out, bottom .2s ease-in-out;
+    transition: left .2s ease-in-out, right .2s ease-in-out, top .2s ease-in-out, bottom .2s ease-in-out;
+    background-image: url('../images/arrow-right-white.svg');
+    top: 50%;
+    left: -30px;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 14px;
+    height: 12px;
+    background-size: contain;
+    z-index: 1;
+}
+
+.button--sub:hover::before {
+    left: -20px;
+}
+
+.button.my-esuite-button {
+    margin-left: 0;
+}
+
+.resources-s {
+    padding-bottom: 90px;
+    background-color: #fff;
+}
+
+.resources-s:after {
+    display: none;
+}
+
+.type-team {
+	padding: 30px 0;
+}
+
+@media screen and (max-width: 1434px) {
+    .sub-buttons {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .button--sub {
+        margin-left: auto!important;
+    }
+    
+    .sub-buttons {
+        text-align: right;
+    }
+
+    .resources-s {
+        padding-bottom: 33px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .sub-buttons__wrapper {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .resources-s {
+        padding-bottom: 13px;
+    }
+
+    .sub-buttons {
+        background-color: #6e7591;
+        left: -20px;
+        width: calc(100% + 40px);
+    }
+
+    .button--sub {
+        width: calc(100% - 40px);
+        margin-left: auto!important;
+    }
+}
